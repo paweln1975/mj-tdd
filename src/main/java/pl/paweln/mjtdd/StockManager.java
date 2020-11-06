@@ -2,14 +2,25 @@ package pl.paweln.mjtdd;
 
 public class StockManager {
 
-    public void setService(ExternalISBNDataService service) {
-        this.service = service;
+    private ExternalISBNDataService webService;
+    private ExternalISBNDataService databaseService;
+
+    public void setDatabaseService(ExternalISBNDataService databaseService) {
+        this.databaseService = databaseService;
     }
 
-    private ExternalISBNDataService service;
+    public void setWebService(ExternalISBNDataService webService) {
+        this.webService = webService;
+    }
+
+
 
     public String getLocatorCode(String isbn) {
-        Book book = service.lookup(isbn);
+        Book book = databaseService.lookup(isbn);
+
+        if (book == null) {
+            book = webService.lookup(isbn);
+        }
 
         return isbn.substring(isbn.length() - 4) +
                 book.getAuthor().charAt(0) +
