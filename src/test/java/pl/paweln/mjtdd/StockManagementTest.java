@@ -42,7 +42,7 @@ public class StockManagementTest {
 
         verify(testDataBaseService, times(1)).lookup("0140177396");
 
-        verify(testWebService, times(0)).lookup(anyString());
+        verify(testWebService, never()).lookup(anyString());
     }
 
     @Test
