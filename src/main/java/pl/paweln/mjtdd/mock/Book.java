@@ -1,4 +1,4 @@
-package pl.paweln.mjtdd;
+package pl.paweln.mjtdd.mock;
 
 public class Book {
     private String isbn;

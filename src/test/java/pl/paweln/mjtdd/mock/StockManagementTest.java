@@ -1,7 +1,11 @@
-package pl.paweln.mjtdd;
+package pl.paweln.mjtdd.mock;
 
 import org.junit.Before;
 import org.junit.Test;
+import pl.paweln.mjtdd.mock.Book;
+import pl.paweln.mjtdd.mock.ExternalISBNDataService;
+import pl.paweln.mjtdd.mock.StockManager;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 

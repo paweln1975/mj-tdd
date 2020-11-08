@@ -1,4 +1,4 @@
-package pl.paweln.mjtdd;
+package pl.paweln.mjtdd.junit;
 
 public class ValidateISBN {
 

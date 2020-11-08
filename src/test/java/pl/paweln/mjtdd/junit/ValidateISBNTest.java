@@ -1,9 +1,10 @@
-package pl.paweln.mjtdd;
+package pl.paweln.mjtdd.junit;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import pl.paweln.mjtdd.junit.ValidateISBN;
 
 
 public class ValidateISBNTest {
